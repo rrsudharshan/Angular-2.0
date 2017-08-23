@@ -10,6 +10,7 @@ export   class   SignupComponent  {
   model:any={};
   signup(){
     console.log(this.model);
+    alert('Hai '+this.model.firstName+' '+this.model.lastName+'   Your Details have Registered Succesfully! ');
     this._router.navigate(['/Login']);
   }
 }

@@ -10,6 +10,7 @@ export   class   LoginComponent  {
   model:any={};
   login(){
     console.log(this.model);
+    alert('Hai '+this.model.username+' Your logged in Succesfully! ');
     this._router.navigate(['/Signup']);
   }
 }
