@@ -3,12 +3,12 @@ import { Router }  from '@angular/router';
 
 @Component ({
   selector: 'my-app',
-  templateUrl: '/register.component.html',
+  templateUrl: '/signup.component.html',
 })
-export   class   RegisterComponent  {
+export   class   SignupComponent  {
   constructor(private _router: Router){}
   model:any={};
-  register(){
+  signup(){
     console.log(this.model);
     this._router.navigate(['/Login']);
   }

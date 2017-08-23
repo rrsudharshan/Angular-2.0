@@ -10,6 +10,6 @@ export   class   LoginComponent  {
   model:any={};
   login(){
     console.log(this.model);
-    this._router.navigate(['/Register']);
+    this._router.navigate(['/Signup']);
   }
 }
