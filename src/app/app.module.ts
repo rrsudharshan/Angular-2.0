@@ -6,6 +6,7 @@ import { RegisterComponent } from './register.component'
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'Login', component: LoginComponent },
   { path: 'Register', component: RegisterComponent },
 ];
