@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Hai </h2>
+  <p></p>
+  <table class="table table-bordered" >
+    <thead >
+    <tr >
+      <th class="text-center">Firstname</th>
+      <th class="text-center">Lastname</th>
+      <th class="text-center"> Username</th>
+    </tr>
+    </thead>
+    <tbody class="text-center">
+    <tr *ngFor="let uData of uDetails" >
+      <td>{{uData.firstName}}</td>
+      <td>{{uData.lastName}}</td>
+      <td>{{uData.username}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -9,8 +9,22 @@
   Welcome to {{title}}!
 </h1>
 <ul>
-  <li><a [routerLink] = "['/Login']">Login </a></li>
-  <li><a [routerLink] = "['/Signup']">Signup</a></li>
+
+
+
+  <nav class="navbar navbar-inverse" style="background-color: darkslategray;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a [routerLink] = "['/Login']">Login</a></li>
+        <li><a [routerLink] = "['/Signup']">Signup</a></li>
+        <li><a [routerLink] = "['/UserDetails']">All Users</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
 </ul>
 <router-outlet></router-outlet>'
 
