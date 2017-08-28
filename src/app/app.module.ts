@@ -8,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './not-found.component';
 import {userData} from './services/app.service';
-import { Http , Response } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -19,9 +19,9 @@ const appRoutes: Routes = [
 ];
 
 @NgModule ({
-  imports: [ BrowserModule,FormsModule,Http,
+  imports: [ BrowserModule,FormsModule,HttpModule,
     RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent,LoginComponent,SignupComponent,PageNotFoundComponent],
+  declarations: [ AppComponent,LoginComponent,SignupComponent,PageNotFoundComponent,UserDetails],
   bootstrap: [ AppComponent ],
   providers:[userData]
 })

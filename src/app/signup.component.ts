@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { Router }  from '@angular/router';
 import {userData} from './services/app.service';
-import {HttpClientModule} from '@angular/common/http';
+import { Http , Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import { IProduct } from './product';
+
+
 @Component ({
   selector: 'my-app',
   templateUrl: '/signup.component.html',
-  //providers : [userData]
 })
 export   class   SignupComponent  {
   constructor(private _router: Router,private userData: userData){
@@ -13,6 +17,17 @@ export   class   SignupComponent  {
 
 
   }
+
+  iproducts: IProduct[];
+
+
+  ngOnInit() : void {
+    this.userData.getproducts()
+      .subscribe(iproducts => this.iproducts = iproducts);
+  }
+
+
+
   model:any={};
   signup(){
     //console.log(this.model);
