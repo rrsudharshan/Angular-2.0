@@ -8,11 +8,18 @@ import { IProduct } from '../product';
 @Injectable()
 export class userData {
   uData=new Array();
-  private _producturl='../data.json';
-  constructor(private _http: Http){}
+  //private _producturl='../data.json';
+
+
+
+  constructor(private _http: Http){
+
+   // console.log(this._producturl);
+
+  }
 
   getproducts(): Observable<IProduct[]> {
-    return this._http.get(this._producturl)
+    return this._http.get('assets/data.json')
       .map((response: Response) => <IProduct[]> response.json())
       .do(data => console.log(JSON.stringify(data)));
   }

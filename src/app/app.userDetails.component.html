@@ -10,8 +10,8 @@
     </tr>
     </thead>
     <tbody class="text-center">
-    <tr *ngFor="let uData of uDetails" >
-      <td>{{uData.firstName}}</td>
+    <tr *ngFor="let uData of uDetails;let i=index" >
+      <td>{{i}},{{uData.firstName}}</td>
       <td>{{uData.lastName}}</td>
       <td>{{uData.username}}</td>
     </tr>
