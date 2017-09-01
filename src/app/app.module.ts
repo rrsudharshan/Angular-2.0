@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from './not-found.component';
 import {userData} from './services/app.service';
 import { HttpModule } from '@angular/http';
 import { HighlightDirective } from './app.directive';
-
+  
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'Login', component: LoginComponent },

@@ -1,4 +1,4 @@
 export interface IProduct {
-  ProductID: number;
-  ProductName: string;
+  name: string;
+  age: number;
 }
