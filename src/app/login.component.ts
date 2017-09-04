@@ -17,4 +17,14 @@ export   class   LoginComponent  {
     alert('Hai '+this.model.username+' Your logged in Succesfully! ');
     this._router.navigate(['/Signup']);
   }
+
+
+  values = '';
+
+  onKey(event: any) { // without type info
+
+    console.log(event);
+    this.values += event.target.value + ' | ';
+  }
+
 }

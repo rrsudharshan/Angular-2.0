@@ -10,19 +10,23 @@ import { PageNotFoundComponent } from './not-found.component';
 import {userData} from './services/app.service';
 import { HttpModule } from '@angular/http';
 import { HighlightDirective } from './app.directive';
-  
+import { HeroChildComponent } from './hero-child.component';
+import { HeroParentComponent } from './hero-parent.component';
+
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'Login', component: LoginComponent },
   { path: 'Signup', component: SignupComponent },
   { path: 'UserDetails', component: UserDetails },
+  { path: 'hero', component: HeroChildComponent },
+  { path: 'heros', component: HeroParentComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule ({
   imports: [ BrowserModule,FormsModule,HttpModule,
     RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent,LoginComponent,SignupComponent,PageNotFoundComponent,UserDetails,HighlightDirective],
+  declarations: [ AppComponent,LoginComponent,SignupComponent,PageNotFoundComponent,UserDetails,HighlightDirective,HeroChildComponent,HeroParentComponent],
   bootstrap: [ AppComponent ],
   providers:[userData]
 })
