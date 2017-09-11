@@ -12,7 +12,12 @@ import { HttpModule } from '@angular/http';
 import { HighlightDirective } from './app.directive';
 import { HeroChildComponent } from './hero-child.component';
 import { HeroParentComponent } from './hero-parent.component';
+import { Filters } from './app.filters.component';
+import {MultiplierPipe} from './app.multiplier'
 
+
+
+///src/app/app.filters.component.ts
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'Login', component: LoginComponent },
@@ -20,13 +25,14 @@ const appRoutes: Routes = [
   { path: 'UserDetails', component: UserDetails },
   { path: 'hero', component: HeroChildComponent },
   { path: 'heros', component: HeroParentComponent },
+  { path: 'filters', component: Filters  },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule ({
   imports: [ BrowserModule,FormsModule,HttpModule,
     RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent,LoginComponent,SignupComponent,PageNotFoundComponent,UserDetails,HighlightDirective,HeroChildComponent,HeroParentComponent],
+  declarations: [ AppComponent,LoginComponent,SignupComponent,PageNotFoundComponent,UserDetails,HighlightDirective,HeroChildComponent,HeroParentComponent,Filters,MultiplierPipe],
   bootstrap: [ AppComponent ],
   providers:[userData]
 })
